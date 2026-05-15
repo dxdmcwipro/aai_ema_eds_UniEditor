@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p130360-e1272151.adobeaemcloud.com/bin/franklin.delivery/dxdmcwipro/aai_ema_eds_unieditor/main"
+    url: "https://author-p22953-e148511.adobeaemcloud.com/bin/franklin.delivery/dxdmcwipro/aai_ema_eds_unieditor/main"
     type: "markup"
     suffix: ".html"
