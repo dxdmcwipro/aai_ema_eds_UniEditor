@@ -1,0 +1,11 @@
+{
+  "previewOrg": "dxdmcwipro",
+  "previewSite": "aaisunemauniedi",
+  "baseUrl": "https://www.aainsurance.co.nz/",
+  "type": "xwalk",
+  "contentHostUrl": "author-p22953-e148511.adobeaemcloud.com",
+  "aemSitePath": "/content/test-eds",
+  "aemAssetsFolderPath": "/content/dam/test-eds",
+  "aemSiteName": "test-eds",
+  "aemSiteTitle": "test eds"
+}

@@ -15,14 +15,16 @@
   --background-color: white;
   --light-color: #f8f8f8;
   --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
-  --overlay-background-color:lightgrey;
+  --text-color: #262626;
+  --link-color: #0057b8;
+  --link-hover-color: #003d82;
+  --overlay-background-color: lightgrey;
+  --brand-color: #ffd400;
+  --brand-text-color: #262626;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family: arial, helvetica, sans-serif;
+  --heading-font-family: arial, helvetica, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
