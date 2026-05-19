@@ -3,6 +3,7 @@
     "/content/sunaaiunieds/:/",
     "/content/sunaaiunieds/configuration:/.helix/config.json",
     "/content/sunaaiunieds/metadata:/metadata.json"
+    "/content/dam/sunaaiunieds/"
   ],
   "includes": [
     "/content/sunaaiunieds/"
