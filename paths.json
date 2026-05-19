@@ -1,10 +1,10 @@
 {
   "mappings": [
-    "/content/dxdmcwipro/:/",
-    "/content/dxdmcwipro/configuration:/.helix/config.json",
-    "/content/dxdmcwipro/metadata:/metadata.json"
+    "/content/aaisunemauniedi/:/",
+    "/content/aaisunemauniedi/configuration:/.helix/config.json",
+    "/content/aaisunemauniedi/metadata:/metadata.json"
   ],
   "includes": [
-    "/content/dxdmcwipro/"
+    "/content/aaisunemauniedi/"
   ]
 }
