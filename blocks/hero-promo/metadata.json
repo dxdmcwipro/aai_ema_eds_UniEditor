@@ -1,0 +1,39 @@
+{
+  "variantName": "hero-promo",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-05-19T14:41:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.aainsurance.co.nz/",
+    "originPage": "homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "minimal",
+    "purpose": "promo-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "heading + 3 CTAs + promo text",
+    "buttonCount": 3,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage promotional banners",
+      "campaign landing pages",
+      "seasonal offer pages"
+    ],
+    "notSuitableFor": [
+      "text-heavy content pages",
+      "simple blog post headers",
+      "pages without background imagery"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-19T14:41:00.000Z"
+  }
+}

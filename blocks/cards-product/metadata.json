@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-product",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-19T14:41:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.aainsurance.co.nz/",
+    "originPage": "homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "product-navigation",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon + label + optional dropdown",
+    "buttonCount": 0,
+    "imageCount": 12
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product category grids",
+      "service listing pages",
+      "icon-based navigation grids"
+    ],
+    "notSuitableFor": [
+      "editorial content with large images",
+      "detailed product descriptions",
+      "content with long text blocks"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-19T14:41:00.000Z"
+  }
+}

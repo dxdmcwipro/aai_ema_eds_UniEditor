@@ -1,0 +1,40 @@
+{
+  "variantName": "columns-feature",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-19T14:41:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.aainsurance.co.nz/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "feature-showcase",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon + title + description + link",
+    "buttonCount": 0,
+    "imageCount": 3
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "feature highlight sections",
+      "value proposition columns",
+      "why choose us sections",
+      "benefit showcases with icons"
+    ],
+    "notSuitableFor": [
+      "image-heavy galleries",
+      "detailed product comparisons",
+      "content with large photos"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-19T14:41:00.000Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "variantName": "cards-editorial",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-19T14:41:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.aainsurance.co.nz/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "editorial-promo",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + title + description + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "promotional card grids",
+      "blog post teasers",
+      "editorial content highlights",
+      "news article cards"
+    ],
+    "notSuitableFor": [
+      "icon-only navigation grids",
+      "compact product listings",
+      "content without images"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-19T14:41:00.000Z"
+  }
+}

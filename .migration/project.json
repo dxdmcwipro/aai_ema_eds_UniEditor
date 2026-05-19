@@ -3,9 +3,10 @@
   "previewSite": "aaisunemauniedi",
   "baseUrl": "https://www.aainsurance.co.nz/",
   "type": "xwalk",
+  "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json",
   "contentHostUrl": "author-p22953-e148511.adobeaemcloud.com",
-  "aemSitePath": "/content/test-eds",
-  "aemAssetsFolderPath": "/content/dam/test-eds",
-  "aemSiteName": "test-eds",
-  "aemSiteTitle": "test eds"
+  "aemSitePath": "content/sunaaiunieds",
+  "aemAssetsFolderPath": "/content/dam/sunaaiunieds",
+  "aemSiteName": "sunaaiunieds",
+  "aemSiteTitle": "sunaaiunieds"
 }
