@@ -11,53 +11,133 @@
  */
 
 :root {
-  /* colors */
+  /* colors - primary */
   --background-color: #fff;
-  --light-color: #f2f1ed;
-  --dark-color: #595959;
   --text-color: #262626;
-  --link-color: #0d59bf;
-  --link-hover-color: #09438f;
-  --overlay-background-color: #dad9d5;
   --brand-color: #ffd400;
   --brand-text-color: #262626;
   --brand-blue: #0d59bf;
+  --link-color: #0d59bf;
+  --link-hover-color: #09438f;
+
+  /* colors - neutrals */
+  --light-color: #f2f1ed;
+  --dark-color: #595959;
+  --gray-subtle: #faf9f5;
+  --gray-mid: #9b9a96;
   --border-color: #dad9d5;
+  --border-color-light: #c0bfbb;
+  --overlay-background-color: #dad9d5;
+
+  /* colors - extended palette */
+  --blue-light: #bdd9ff;
+  --blue-info: #e9f2ff;
+  --yellow-light: #fff4bf;
+  --yellow-warm: #ffe97f;
+  --error-color: #ee6363;
+  --success-color: #56bc6a;
 
   /* fonts */
   --body-font-family: arial, sans-serif;
   --heading-font-family: arial, sans-serif;
+  --heading-font-family-h1: fs_lola_web, fs_lola_arial_fallback, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 16px;
   --body-font-size-s: 14px;
   --body-font-size-xs: 12px;
 
-  /* heading sizes */
-  --heading-font-size-xxl: 40px;
-  --heading-font-size-xl: 32px;
-  --heading-font-size-l: 24px;
-  --heading-font-size-m: 20px;
-  --heading-font-size-s: 18px;
-  --heading-font-size-xs: 16px;
+  /* heading sizes - mobile first */
+  --heading-font-size-xxl: 2.5rem;
+  --heading-font-size-xl: 1.75rem;
+  --heading-font-size-l: 1.5rem;
+  --heading-font-size-m: 1.25rem;
+  --heading-font-size-s: 1.125rem;
+  --heading-font-size-xs: 1rem;
 
-  /* nav heights */
+  /* line heights */
+  --body-line-height: 1.5rem;
+  --heading-line-height: 1.2;
+
+  /* spacing */
+  --spacing-xs: 8px;
+  --spacing-s: 16px;
+  --spacing-m: 24px;
+  --spacing-l: 32px;
+  --spacing-xl: 48px;
+  --spacing-xxl: 64px;
+  --content-padding-mobile: 16px;
+  --content-padding-desktop: 24px;
+  --section-gap-mobile: 40px;
+  --section-gap-desktop: 80px;
+  --card-gap: 24px;
+
+  /* layout */
+  --max-width: 1200px;
+  --max-width-xl: 1152px;
   --nav-height: 64px;
   --breadcrumbs-height: 34px;
   --header-height: var(--nav-height);
+
+  /* shadows */
+  --shadow-card: 0 3px 3px -2px rgb(0 0 0 / 20%), 0 3px 4px rgb(0 0 0 / 10%), 0 1px 8px rgb(0 0 0 / 10%);
+  --shadow-icon: 0 0 2px rgb(0 0 0 / 10%), 0 2px 10px rgb(34 43 56 / 25%);
+  --shadow-dropdown: 0 2px 5px rgb(0 0 0 / 20%);
+  --shadow-mega-menu: -2px 3px 5px rgb(0 0 0 / 20%);
+
+  /* border radius */
+  --radius-button: 8px;
+  --radius-card: 16px;
+  --radius-input: 4px;
+  --radius-hero-card: 16px 16px 0 0;
+  --radius-circle: 50%;
+
+  /* button */
+  --button-padding: 12px 24px;
+  --button-min-height: 48px;
+  --button-font-size: 16px;
+  --button-font-weight: 600;
+
+  /* breakpoints (reference only - use in media queries directly)
+   * --breakpoint-sm: 576px;
+   * --breakpoint-md: 769px;
+   * --breakpoint-mdlg: 896px;
+   * --breakpoint-lg: 992px;
+   * --breakpoint-xl: 1200px;
+   */
+}
+
+@font-face {
+  font-family: "fs_lola_web";
+  src: local(fs_lola_web), url("/fonts/fs_lola_web-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "fs_lola_arial_fallback";
+  src: local(arial bold), local(arial-boldmt), local(arial);
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  size-adjust: 93.53%;
+  ascent-override: 85.9%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+  font-display: swap;
+}
+
+@media (width >= 769px) {
+  :root {
+    --heading-font-size-xxl: 3rem;
+    --heading-font-size-xl: 2rem;
+  }
 }
 
 @media (width >= 900px) {
   :root {
     --nav-height: 96px;
-
-    /* heading sizes */
-    --heading-font-size-xxl: 48px;
-    --heading-font-size-xl: 32px;
-    --heading-font-size-l: 24px;
-    --heading-font-size-m: 20px;
-    --heading-font-size-s: 18px;
-    --heading-font-size-xs: 16px;
   }
 }
 
@@ -68,7 +148,7 @@ body {
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
-  line-height: 1.5;
+  line-height: var(--body-line-height);
 }
 
 body.appear {
@@ -101,24 +181,45 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 8px;
+  margin: 0 0 var(--spacing-xs);
   font-family: var(--heading-font-family);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: var(--heading-line-height);
   scroll-margin: 40px;
   color: var(--text-color);
 }
 
 h1 {
+  font-family: var(--heading-font-family-h1);
   font-size: var(--heading-font-size-xxl);
+  line-height: 1.05;
   color: var(--brand-blue);
 }
 
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+h2 {
+  font-size: var(--heading-font-size-xl);
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+  line-height: 1.17;
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+  line-height: 1.2;
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+  line-height: 1.33;
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+  line-height: 1.5;
+}
 
 p,
 dl,
@@ -172,14 +273,14 @@ button {
   box-sizing: border-box;
   display: inline-block;
   max-width: 100%;
-  margin: 8px 8px 8px 0;
+  margin: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs) 0;
   border: none;
-  border-radius: 8px;
-  padding: 12px 24px;
+  border-radius: var(--radius-button);
+  padding: var(--button-padding);
   font-family: var(--body-font-family);
   font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: var(--button-font-weight);
+  font-size: var(--button-font-size);
   line-height: 24px;
   text-align: center;
   text-decoration: none;
@@ -189,8 +290,8 @@ button {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  min-height: 48px;
-  min-width: 48px;
+  min-height: var(--button-min-height);
+  min-width: var(--button-min-height);
   transition: background-color 0.2s;
 }
 
@@ -244,13 +345,13 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 16px 0;
+  margin: var(--spacing-s) 0;
 }
 
 main > .section > div {
-  max-width: 1200px;
+  max-width: var(--max-width);
   margin: auto;
-  padding: 0 16px;
+  padding: 0 var(--content-padding-mobile);
 }
 
 main > .section:first-of-type {
@@ -259,13 +360,13 @@ main > .section:first-of-type {
 
 @media (width >= 576px) {
   main > .section > div {
-    padding: 0 24px;
+    padding: 0 var(--content-padding-desktop);
   }
 }
 
 @media (width >= 1200px) {
   main > .section > div {
-    max-width: 1152px;
+    max-width: var(--max-width-xl);
     padding: 0;
   }
 }
