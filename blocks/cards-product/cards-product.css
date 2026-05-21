@@ -3,25 +3,93 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (width >= 576px) {
+  .cards-product > ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (width >= 769px) {
+  .cards-product > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (width >= 992px) {
+  .cards-product > ul {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 
 .cards-product > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
-}
-
-.cards-product .cards-product-card-body {
-  margin: 16px;
+  text-align: center;
+  background: none;
+  border: none;
+  padding: 16px 8px;
 }
 
 .cards-product .cards-product-card-image {
-  line-height: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
 }
 
-.cards-product > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+.cards-product .cards-product-card-image p {
+  margin: 0;
+}
+
+.cards-product .cards-product-card-image a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border: 2px solid #f2f1ed;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgb(0 0 0 / 10%), 0 2px 10px rgb(34 43 56 / 25%);
+  overflow: hidden;
+  font-size: 0;
+  text-decoration: none;
+}
+
+.cards-product .cards-product-card-image img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.cards-product .cards-product-card-body {
+  margin: 0;
+}
+
+.cards-product .cards-product-card-body > p {
+  margin: 0 0 4px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.cards-product .cards-product-card-body > p a {
+  color: var(--brand-blue, #0d59bf);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.cards-product .cards-product-card-body > p em {
+  color: var(--dark-color, #595959);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.cards-product .cards-product-card-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
 }
