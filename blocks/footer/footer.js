@@ -13,8 +13,20 @@ export default async function decorate(block) {
 
   // decorate footer DOM
   block.textContent = '';
-  const footer = document.createElement('div');
-  while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
+  if (fragment) {
+    const sections = [...fragment.querySelectorAll(':scope .section')];
+    sections.forEach((section) => {
+      const wrapper = section.querySelector(':scope > .default-content-wrapper');
+      const source = wrapper || section;
+      block.append(...source.children);
+    });
 
-  block.append(footer);
+    const divs = [...block.querySelectorAll(':scope > div')];
+    if (divs.length > 1) {
+      const linksRow = document.createElement('div');
+      linksRow.className = 'footer-links';
+      divs.forEach((div) => linksRow.append(div));
+      block.prepend(linksRow);
+    }
+  }
 }
