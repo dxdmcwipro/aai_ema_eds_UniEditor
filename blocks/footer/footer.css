@@ -24,6 +24,7 @@ footer .footer .footer-links {
     flex-direction: row;
   }
 
+  footer .footer .footer-links > .footer-col,
   footer .footer .footer-links > div {
     flex: 1;
   }

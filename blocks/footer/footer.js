@@ -20,13 +20,31 @@ export default async function decorate(block) {
       const source = wrapper || section;
       block.append(...source.children);
     });
+  }
 
-    const divs = [...block.querySelectorAll(':scope > div')];
-    if (divs.length > 1) {
-      const linksRow = document.createElement('div');
-      linksRow.className = 'footer-links';
-      divs.forEach((div) => linksRow.append(div));
-      block.prepend(linksRow);
+  // Group h6 + ul pairs into column divs for the 4-column layout
+  const children = [...block.children];
+  const linksRow = document.createElement('div');
+  linksRow.className = 'footer-links';
+  let currentCol = null;
+
+  children.forEach((child) => {
+    if (child.tagName === 'H6') {
+      currentCol = document.createElement('div');
+      currentCol.className = 'footer-col';
+      currentCol.append(child);
+      linksRow.append(currentCol);
+    } else if (child.tagName === 'UL' && currentCol) {
+      currentCol.append(child);
+    } else if (child.tagName === 'DIV' && child.querySelector('h6')) {
+      linksRow.append(child);
+    } else {
+      // paragraphs (social, legal, copyright) stay as direct children
+      block.append(child);
     }
+  });
+
+  if (linksRow.children.length > 0) {
+    block.prepend(linksRow);
   }
 }
