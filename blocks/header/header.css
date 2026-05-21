@@ -301,6 +301,25 @@ header nav .nav-tools a {
   white-space: nowrap;
 }
 
+header nav .nav-tools p:first-child a {
+  margin-right: 8px;
+}
+
+@media (width >= 900px) {
+  header nav .nav-tools p:last-child a {
+    background-color: var(--brand-blue);
+    color: #fff;
+    border-radius: var(--radius-button);
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  header nav .nav-tools p:last-child a:hover {
+    background-color: var(--link-hover-color);
+    text-decoration: none;
+  }
+}
+
 header nav .nav-tools .button {
   margin: 0;
   border: none;

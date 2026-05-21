@@ -1,0 +1,121 @@
+.hero-cta {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f2a4a;
+  border-radius: var(--radius-card);
+  padding: 64px 24px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-cta::before {
+  content: '';
+  position: absolute;
+  top: -64px;
+  right: -64px;
+  width: 256px;
+  height: 256px;
+  border-radius: 50%;
+  background-color: rgb(255 204 0 / 20%);
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.hero-cta .hero-cta-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  max-width: 672px;
+  width: 100%;
+  z-index: 1;
+}
+
+.hero-cta h1,
+.hero-cta h2 {
+  font-family: 'Hanken Grotesk', var(--heading-font-family);
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.96px;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+}
+
+.hero-cta p {
+  font-family: Inter, var(--body-font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: rgb(255 255 255 / 80%);
+  margin: 0;
+  text-align: center;
+}
+
+.hero-cta .button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding-top: 16px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.hero-cta a.button {
+  font-family: Inter, var(--body-font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  padding: 16px 40px;
+  border-radius: var(--radius-button);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: auto;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.hero-cta a.button:first-child {
+  background-color: #fc0;
+  color: #241a00;
+}
+
+.hero-cta a.button:first-child:hover {
+  background-color: #e6b800;
+}
+
+.hero-cta a.button.secondary {
+  background-color: rgb(255 255 255 / 10%);
+  border: 1px solid rgb(255 255 255 / 30%);
+  color: #fff;
+  box-shadow: none;
+}
+
+.hero-cta a.button.secondary:hover {
+  background-color: rgb(255 255 255 / 20%);
+  box-shadow: none;
+}
+
+@media (width < 769px) {
+  .hero-cta h1,
+  .hero-cta h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .hero-cta .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-cta a.button {
+    width: 100%;
+    max-width: 320px;
+  }
+}
