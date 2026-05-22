@@ -89,7 +89,7 @@ function a11yLinks(main) {
     let label = link.textContent;
     if (!label && link.querySelector('span.icon')) {
       const icon = link.querySelector('span.icon');
-      label = icon ? icon.classList[1]?.split('-')[1] : label;
+      label = icon && icon.classList.length > 1 ? icon.classList[1].split('-')[1] : label;
     }
     link.setAttribute('aria-label', label);
   });

@@ -65,7 +65,13 @@ export async function openModal(fragmentUrl) {
     ? new URL(fragmentUrl, window.location).pathname
     : fragmentUrl;
 
-  const fragment = await loadFragment(path);
-  const { showModal } = await createModal(fragment.childNodes);
-  showModal();
+  try {
+    const fragment = await loadFragment(path);
+    if (fragment) {
+      const { showModal } = await createModal(fragment.childNodes);
+      showModal();
+    }
+  } catch (error) {
+    console.error('Failed to load modal fragment:', error);
+  }
 }
