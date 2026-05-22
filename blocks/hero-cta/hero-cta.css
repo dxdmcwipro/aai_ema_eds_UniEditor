@@ -70,8 +70,8 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 28px;
-  padding: 16px 40px;
-  border-radius: var(--radius-button);
+  padding: 17px 40px;
+  border-radius: 8px;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -82,12 +82,12 @@
 }
 
 .hero-cta a.button:first-child {
-  background-color: #fc0;
-  color: #241a00;
+  background-color: var(--brand-blue);
+  color: #fff;
 }
 
 .hero-cta a.button:first-child:hover {
-  background-color: #e6b800;
+  background-color: var(--link-hover-color);
 }
 
 .hero-cta a.button.secondary {
